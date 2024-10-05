@@ -6,4 +6,4 @@ def addevent(event):
     # tf.create_event(event_name = document.getElementById('ev-name-box').text)
     out = document.getElementByClass('ev-name')
 
-    out.innerHTML = document.getElementById('ev-name-box').innerHTML
+    out.innerHTML = "Blud"
