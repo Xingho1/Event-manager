@@ -4,6 +4,6 @@ from pyscript import document
 from pyscript import console
 def addevent(event):
     # tf.create_event(event_name = document.getElementById('ev-name-box').text)
-    out = document.getElementByClass('ev-name')
+    out = document.getElementByClassName('ev-name')
 
-    out.innerHTML = "Blud"
+    out.innerHTML = document.getElementById('ev-name-box').innerHTML
