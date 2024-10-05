@@ -1,0 +1,3 @@
+{
+    "packages": ["firebase_admin","pyscript","fpdf","mysql","bcrypt","random"]
+}

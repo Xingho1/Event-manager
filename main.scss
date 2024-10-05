@@ -1,0 +1,137 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body,html{
+    width: 100vw;
+    height: 100vh;
+}
+
+$Main-font:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+header{
+    position: fixed;
+    width: inherit;
+    height:100px;
+    pointer-events:none;
+    
+    h1{
+        font-size: 3rem;
+        text-align: center;
+        width: inherit;
+        height: 70px;
+        color: aliceblue;
+        background-color: rgb(127, 163, 255);
+        font-family:$Main-font;
+    }
+    p{  
+        background-color: aliceblue;
+        font-size: 1.5rem;
+        text-align: center;
+        width: inherit;
+        height: 30px;
+        color: rgb(127, 163, 255);
+        border-block: 1px solid black;
+        font-family: $Main-font;
+    }
+}
+nav{
+    position: fixed;
+    width: 100vw;
+    height: 30px;
+    top:100px;
+    background-color: aliceblue;
+    border-bottom: 1px solid black;
+    ul{
+        width: inherit;
+        height: inherit;
+        list-style: none;
+        display: grid;
+        grid-area: 1/8/1/1;
+        li{
+            width: auto;
+            height: auto;
+            background-color: rgb(127, 163, 255);
+            border-left: 1px solid;
+            text-align: center;
+            a{
+                color: aliceblue;
+                font-family: $Main-font;
+                font-size: 1.5rem;
+                text-decoration: none;
+                &:hover{
+                    color: rgb(188, 193, 198);
+                }
+            }
+            
+        }
+        
+        .log-btn{
+            grid-column-start: 8;
+            grid-column-end: 9;
+        }
+    }
+}
+
+main{
+    width: inherit;
+    height: 100vh;
+    padding-top: 140px;
+    .title{
+        width: inherit;
+        height:max-content;
+        font-size: 3rem;
+        font-family: $Main-font;
+        color:rgb(127, 163, 255);
+    }
+    .hrs{
+        border: none;
+        background:  rgb(127, 163, 255);
+        height: 5px;
+    }
+    .event-box {
+        background-color: #ffffff;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        // color:rgb(127, 163, 255);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin: 10px;
+        width: 300px;
+        color: rgb(127, 163, 255);
+        transition: all 0.1s ease;
+        
+        
+        h2 {
+            font-size: 1.5em;
+            margin: 0;
+            color:inherit;
+        }
+        
+        p {
+            color: #666;
+            margin: 5px 0;
+        }
+        
+
+    }
+    .event-box:hover {
+        background-color: rgb(220, 158, 158);
+        color:whitesmoke;
+    }
+}
+
+
+footer{
+    width: 100vw;
+    height: 30px;
+    color:aliceblue;
+    background-color: rgb(127, 163, 255) ;
+    font-size: 1.2rem;
+    font-family: $Main-font;
+    text-align: center;
+    position: fixed;
+    bottom: 0vh; 
+}

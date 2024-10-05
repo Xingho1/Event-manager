@@ -1,0 +1,74 @@
+@use 'main';
+@use 'login';
+
+$Main-font:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+header{
+    pointer-events:none;
+}
+main{ 
+    width: 100%;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    .main-box{
+        min-width: 600px;
+        .ev-submit{
+            width: 600px;
+            background-color: rgb(127, 163, 255);
+            color:aliceblue;
+            border:none;
+            border-radius: 5px;
+            font-size: larger;
+            &:hover{
+                background-color: rgb(98, 125, 194);
+            }
+        }
+    }
+    .head-box{
+        border:2px solid rgb(127, 163, 255);
+        padding: 5px;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        .ev-name{
+            color:rgb(127, 163, 255);
+            font-family: $Main-font;
+            font-size: 2rem;
+        }
+        #ev-name-box{
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    }  
+    .body-box{
+        border:2px solid rgb(127, 163, 255);
+        padding: 5px;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        h2{
+            color:rgb(127, 163, 255);
+        }
+        textarea {
+            width: 100%;
+            max-width: 600px;
+            // padding: 10px 0px 10px;
+            // margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        #preview {
+            width: 100%;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    }
+     
+}

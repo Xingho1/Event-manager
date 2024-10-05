@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Portal</title>
+    <link rel="stylesheet" href="../css/admin-portal.css">
+    <!-- PyScript CSS --> 
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.6.1/core.css"> 
+    <!-- This script tag bootstraps PyScript --> 
+    <link rel="stylesheet" href="/css/main.css">
+    
+</head>
+<body>
+    <header>
+        <h1>Event Management System</h1>
+        <p>Vortex presents EMS for CITK</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#admin">Admin Portal</a></li>
+            <li><a href="#events">Events</a></li>
+            <li class="log-btn"><a onclick="showOverlay()">Login</a></li>
+            <!-- <li class="pfp"><div>JP</div></li> -->
+        </ul>
+    </nav>
+    <main>
+        <div class="main-box">
+            <div class="head-box">
+                <p class="ev-name">Event Title</p>
+                <input type="text" name="name" id="ev-name-box">
+            </div>
+            
+            <div class="body-box">
+                <h2>Markdown Text Box:</h2>
+                <textarea id="markdown-text" rows="10" placeholder="Type your markdown text here..."></textarea>
+                <h2>Preview:</h2>
+                <div id="preview"></div>
+            </div>
+            <button class="ev-submit" id="ev-submit" pys-onClick="addevent">Add Event</button>
+        </div>
+        
+        
+    </main>
+    <div class="overlay" id="overlay">
+        <section class="overlay-content">
+            <nav>
+                <button>Login</button>
+                <button>Register</button>
+                <button onclick="closeOverlay()">Close</button>
+            </nav>
+            <hr>
+            <section class="login-cls">
+                <div>
+                    <p>User Id: </p>
+                    <input type="text" name="name" id="log-name">
+                    <p>Password: </p>
+                    <input type="password" name="Password" id="log-pass">
+
+                </div>
+            </section>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 My Web App</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/pyscript-js@1.2.5/dist/js/pyscript.min.js" charset="utf-8"></script>
+    <py-script> 
+        ev-sub = document.getElementById('ev-submit')
+    </py-script>
+    
+    <script>
+         function showOverlay() {   
+            document.getElementById('overlay').style.display = 'flex';
+        }
+        function closeOverlay() {
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script type="py" src="../Python/main.py" config="./pyscript.json"></script>
+
+    <script>
+        document.getElementById('markdown-text').addEventListener('input', function() {
+            const markdownText = this.value;
+            document.getElementById('preview').innerHTML = marked.parse(markdownText);;
+        });
+    </script>
+</body>
+</html>

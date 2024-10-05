@@ -1,0 +1,212 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100vw;
+  height: 100vh;
+}
+
+header {
+  position: fixed;
+  width: inherit;
+  height: 100px;
+  pointer-events: none;
+}
+header h1 {
+  font-size: 3rem;
+  text-align: center;
+  width: inherit;
+  height: 70px;
+  color: aliceblue;
+  background-color: rgb(127, 163, 255);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+header p {
+  background-color: aliceblue;
+  font-size: 1.5rem;
+  text-align: center;
+  width: inherit;
+  height: 30px;
+  color: rgb(127, 163, 255);
+  border-block: 1px solid black;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+nav {
+  position: fixed;
+  width: 100vw;
+  height: 30px;
+  top: 100px;
+  background-color: aliceblue;
+  border-bottom: 1px solid black;
+}
+nav ul {
+  width: inherit;
+  height: inherit;
+  list-style: none;
+  display: grid;
+  grid-area: 1/8/1/1;
+}
+nav ul li {
+  width: auto;
+  height: auto;
+  background-color: rgb(127, 163, 255);
+  border-left: 1px solid;
+  text-align: center;
+}
+nav ul li a {
+  color: aliceblue;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  color: rgb(188, 193, 198);
+}
+nav ul .log-btn {
+  grid-column-start: 8;
+  grid-column-end: 9;
+}
+
+main {
+  width: inherit;
+  height: 100vh;
+  padding-top: 140px;
+}
+main .title {
+  width: inherit;
+  height: -moz-max-content;
+  height: max-content;
+  font-size: 3rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: rgb(127, 163, 255);
+}
+main .hrs {
+  border: none;
+  background: rgb(127, 163, 255);
+  height: 5px;
+}
+main .event-box {
+  background-color: #ffffff;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  width: 300px;
+  color: rgb(127, 163, 255);
+  transition: all 0.1s ease;
+}
+main .event-box h2 {
+  font-size: 1.5em;
+  margin: 0;
+  color: inherit;
+}
+main .event-box p {
+  color: #666;
+  margin: 5px 0;
+}
+main .event-box:hover {
+  background-color: rgb(220, 158, 158);
+  color: whitesmoke;
+}
+
+footer {
+  width: 100vw;
+  height: 30px;
+  color: aliceblue;
+  background-color: rgb(127, 163, 255);
+  font-size: 1.2rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+  position: fixed;
+  bottom: 0vh;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.8);
+  align-items: center;
+  justify-content: center;
+}
+.overlay .overlay-content {
+  background-color: aliceblue;
+}
+.overlay .overlay-content nav {
+  display: flex;
+  flex-direction: row;
+}
+
+header {
+  pointer-events: none;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .main-box {
+  min-width: 600px;
+}
+main .main-box .ev-submit {
+  width: 600px;
+  background-color: rgb(127, 163, 255);
+  color: aliceblue;
+  border: none;
+  border-radius: 5px;
+  font-size: larger;
+}
+main .main-box .ev-submit:hover {
+  background-color: rgb(98, 125, 194);
+}
+main .head-box {
+  border: 2px solid rgb(127, 163, 255);
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+main .head-box .ev-name {
+  color: rgb(127, 163, 255);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 2rem;
+}
+main .head-box #ev-name-box {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+main .body-box {
+  border: 2px solid rgb(127, 163, 255);
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+main .body-box h2 {
+  color: rgb(127, 163, 255);
+}
+main .body-box textarea {
+  width: 100%;
+  max-width: 600px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+main .body-box #preview {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}/*# sourceMappingURL=admin-portal.css.map */
