@@ -8,7 +8,7 @@
     <!-- PyScript CSS --> 
     <link rel="stylesheet" href="https://pyscript.net/releases/2024.6.1/core.css"> 
     <!-- This script tag bootstraps PyScript --> 
-    <link rel="stylesheet" href="/css/main.css">
+    <script type="module" src="https://pyscript.net/releases/2024.6.1/core.js"></script>
     
 </head>
 <body>
@@ -38,7 +38,7 @@
                 <h2>Preview:</h2>
                 <div id="preview"></div>
             </div>
-            <button class="ev-submit" id="ev-submit" pys-onClick="addevent">Add Event</button>
+            <button class="ev-submit" id="ev-submit" py-click="addevent">Add Event</button>
         </div>
         
         
@@ -81,7 +81,7 @@
     </script>
     
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script type="py" src="../Python/main.py" config="./pyscript.json"></script>
+    <script type="py" src="../Python/main.py" config="../pyscript.json"></script>
 
     <script>
         document.getElementById('markdown-text').addEventListener('input', function() {
