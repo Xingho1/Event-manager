@@ -1,16 +1,147 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.overlay .overlay-content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: aliceblue;
+  width: 340px;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 10px;
+  border-radius: 5px;
+}
+.overlay .overlay-content nav {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  top: 0px;
+  width: 100%;
+  height: auto;
+  background-color: none;
+  margin-bottom: 10px;
+  border: none;
+}
+.overlay .overlay-content nav button {
+  width: inherit;
+  height: -moz-max-content;
+  height: max-content;
+  background-color: rgb(127, 163, 255);
+  border: none;
+  padding: 3px;
+  font-size: 1.5rem;
+  color: aliceblue;
+  border-right: 2px solid black;
+}
+.overlay .overlay-content nav button:last-child {
+  border: none;
+  border-radius: 0 5px 5px 0px;
+}
+.overlay .overlay-content nav button:first-child {
+  border-radius: 5px 0 0 5px;
+}
+.overlay .overlay-content nav button:hover {
+  background-color: rgb(32, 67, 156);
+}
+.overlay .overlay-content .login-cls {
+  border: 3px dashed rgb(127, 163, 255);
+  display: flex;
+  border-radius: 5px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 2rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bolder;
+  color: rgb(127, 163, 255);
+  gap: 5px;
+  width: 100%;
+  height: 100%;
+}
+.overlay .overlay-content .login-cls input {
+  border-radius: 5px;
+  color: gray;
+  width: 100%;
+  height: auto;
+  border: 2px solid rgb(127, 163, 255);
+}
+.overlay .overlay-content .login-cls button {
+  width: 100%;
+  border: none;
+  font-family: inherit;
+  background-color: rgb(127, 163, 255);
+  border-radius: 5px;
+  color: aliceblue;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+.overlay .overlay-content .login-cls button:hover {
+  background-color: rgb(32, 67, 156);
+}
+.overlay .overlay-content .reg-cls {
+  border: 3px dashed rgb(127, 163, 255);
+  display: none;
+  border-radius: 5px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 2rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bolder;
+  color: rgb(127, 163, 255);
+  gap: 5px;
+  width: 100%;
+  height: 100%;
+}
+.overlay .overlay-content .reg-cls input {
+  border-radius: 5px;
+  color: gray;
+  width: 100%;
+  height: auto;
+  border: 2px solid rgb(127, 163, 255);
+}
+.overlay .overlay-content .reg-cls button {
+  width: 100%;
+  border: none;
+  font-family: inherit;
+  background-color: rgb(127, 163, 255);
+  border-radius: 5px;
+  color: aliceblue;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+.overlay .overlay-content .reg-cls button:hover {
+  background-color: rgb(32, 67, 156);
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-body, html {
-  width: 100vw;
-  height: 100vh;
+html {
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  min-height: 100%;
 }
 
 header {
-  position: fixed;
+  position: absolute;
   width: inherit;
   height: 100px;
   pointer-events: none;
@@ -36,8 +167,8 @@ header p {
 }
 
 nav {
-  position: fixed;
-  width: 100vw;
+  position: relative;
+  width: inherit;
   height: 30px;
   top: 100px;
   background-color: aliceblue;
@@ -64,7 +195,7 @@ nav ul li a {
   text-decoration: none;
 }
 nav ul li a:hover {
-  color: rgb(188, 193, 198);
+  color: rgb(32, 67, 156);
 }
 nav ul .log-btn {
   grid-column-start: 8;
@@ -73,7 +204,8 @@ nav ul .log-btn {
 
 main {
   width: inherit;
-  height: 100vh;
+  height: -moz-max-content;
+  height: max-content;
   padding-top: 140px;
 }
 main .title {
@@ -110,8 +242,11 @@ main .event-box p {
   margin: 5px 0;
 }
 main .event-box:hover {
-  background-color: rgb(220, 158, 158);
+  background-color: rgb(32, 67, 156);
   color: whitesmoke;
+}
+main .event-box:hover p {
+  color: aliceblue;
 }
 
 footer {
@@ -124,4 +259,5 @@ footer {
   text-align: center;
   position: fixed;
   bottom: 0vh;
+  margin-top: auto;
 }/*# sourceMappingURL=main.css.map */

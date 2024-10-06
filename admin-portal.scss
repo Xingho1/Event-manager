@@ -5,6 +5,14 @@ $Main-font:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 header{
     pointer-events:none;
+    border-bottom: 2px solid black;
+    height: 72px;
+    h1{
+        height: 70px;
+    }
+}
+nav{
+    top:72px;
 }
 main{ 
     width: 100%;
@@ -22,6 +30,7 @@ main{
             border:none;
             border-radius: 5px;
             font-size: larger;
+            margin-bottom: 50px;
             &:hover{
                 background-color: rgb(98, 125, 194);
             }
@@ -32,15 +41,26 @@ main{
         padding: 5px;
         border-radius: 5px;
         margin-bottom: 5px;
+        display: block;
         .ev-name{
             color:rgb(127, 163, 255);
             font-family: $Main-font;
             font-size: 2rem;
         }
+        .ev{
+            color:rgb(127, 163, 255);
+            font-family: $Main-font;
+            font-size: 1.5rem;
+        }
+        div{
+            color:rgb(15, 71, 214);
+            font-family: $Main-font;
+        }
         #ev-name-box{
             width: 100%;
             border: 1px solid #ddd;
             border-radius: 4px;
+            color: gray;
         }
     }  
     .body-box{
@@ -54,8 +74,7 @@ main{
         textarea {
             width: 100%;
             max-width: 600px;
-            // padding: 10px 0px 10px;
-            // margin-bottom: 20px;
+            max-height: 200px;
             border: 1px solid #ddd;
             border-radius: 4px;
             box-sizing: border-box;

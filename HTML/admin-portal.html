@@ -14,7 +14,6 @@
 <body>
     <header>
         <h1>Event Management System</h1>
-        <p>Vortex presents EMS for CITK</p>
     </header>
     <nav>
         <ul>
@@ -27,11 +26,30 @@
     <main>
         <div class="main-box">
             <div class="head-box">
-                <p class="ev-name">Event Title</p>
-                <input type="text" name="name" id="ev-name-box"></div>
-            
+                <p class="ev-name">Event Title:</p>
+                <input type="text" name="name" id="ev-name-box" required>
+                <p class="ev">Venue:</p> 
+                <input type="text" name="venue" id="ev-name-box" required>
+                <p class="ev">Start Date:</p>
+                <input type="date" name="day-s" id="ev-name-box" required>
+                <p class="ev">End Date:</p>
+                <input type="date" name="day-e" id="ev-name-box" required>
+                <p class="ev">Time Limit:</p>
+                <input type="text" name="time" id="ev-name-box" required>
+                <p class="ev">Event Type:</p>
+                <div style="display: flex; border:2px solid rgb(127, 163, 255); border-radius: 5px; padding: 5px; ">
+                    <p>Technical:</p>
+                    <input type="radio" name="type" id="ev-name-box" value="Tech" required>
+                    <hr style="margin-inline: 10px; border-color: rgb(127, 163, 255);">
+                    <p>Cultural:</p>
+                    <input type="radio" name="type" id="ev-name-box" value="cul" required>
+
+                </div>
+                
+            </div>
+                
             <div class="body-box">
-                <h2>Markdown Text Box:</h2>
+                <h2>Design Your Description:</h2>
                 <textarea id="markdown-text" rows="10" placeholder="Type your markdown text here..."></textarea>
                 <h2>Preview:</h2>
                 <div id="preview"></div>
@@ -44,19 +62,28 @@
     <div class="overlay" id="overlay">
         <section class="overlay-content">
             <nav>
-                <button>Login</button>
-                <button>Register</button>
+                <button onclick="login()">Login</button>
+                <button onclick="regis()">Register</button>
                 <button onclick="closeOverlay()">Close</button>
             </nav>
-            <hr>
-            <section class="login-cls">
-                <div>
-                    <p>User Id: </p>
-                    <input type="text" name="name" id="log-name">
-                    <p>Password: </p>
-                    <input type="password" name="Password" id="log-pass">
-
-                </div>
+            
+            <section class="login-cls" id="log-in">
+                <p>User Id: </p>
+                <input type="text" name="name" id="log-name">
+                <p>Password: </p>
+                <input type="password" name="Password" id="log-pass">
+                <button type="submit">Submit</button>
+            </section>
+            <section class="reg-cls" id="reg-in">
+                <p>Email: </p>
+                <input type="text" name="email" id="reg-name">
+                <p>User Name: </p>
+                <input type="text" name="name" id="reg-name">
+                <p>Password: </p>
+                <input type="password" name="Password" id="reg-pass">
+                <p>Confirm Password: </p>
+                <input type="password" name="ConPassword" id="conf-pass">
+                <button type="submit">Submit</button>
             </section>
         </section>
     </div>
@@ -70,6 +97,14 @@
         }
         function closeOverlay() {
             document.getElementById('overlay').style.display = 'none';
+        }
+         function login(){
+            document.getElementById('log-in').style.display = 'flex';
+            document.getElementById('reg-in').style.display = 'none';
+        }
+        function regis(){
+            document.getElementById('log-in').style.display = 'none';
+            document.getElementById('reg-in').style.display = 'flex';
         }
     </script>
     

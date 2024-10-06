@@ -22,7 +22,7 @@
             <li><a href="#home">Home</a></li>
             <li><a href=".\HTML\admin-portal.html">Admin Portal</a></li>
             <li><a href="#events">Events</a></li>
-            <li class="log-btn"><a href="#">Login</a></li>
+            <li class="log-btn"><a onclick="showOverlay()">Login</a></li>
             <!-- <li class="pfp"><div>JP</div></li> -->
         </ul>
     </nav>
@@ -44,10 +44,53 @@
             <button class="event-btn" onclick="">Add Event</button> -->
         </section>
     </main>
+       <div class="overlay" id="overlay">
+        <section class="overlay-content">
+            <nav>
+                <button onclick="login()">Login</button>
+                <button onclick="regis()">Register</button>
+                <button onclick="closeOverlay()">Close</button>
+            </nav>
+            
+            <section class="login-cls" id="log-in">
+                <p>User Id: </p>
+                <input type="text" name="name" id="log-name">
+                <p>Password: </p>
+                <input type="password" name="Password" id="log-pass">
+                <button type="submit">Submit</button>
+            </section>
+            <section class="reg-cls" id="reg-in">
+                <p>Email: </p>
+                <input type="text" name="email" id="reg-name">
+                <p>User Name: </p>
+                <input type="text" name="name" id="reg-name">
+                <p>Password: </p>
+                <input type="password" name="Password" id="reg-pass">
+                <p>Confirm Password: </p>
+                <input type="password" name="ConPassword" id="conf-pass">
+                <button type="submit">Submit</button>
+            </section>
+        </section>
+    </div>
     <footer>
         <p>&copy; 2024 My Web App</p>
     </footer>
     <script type="py" src="Python/main.py" config="./pyscript.json"></script>
-    
+    <script>
+         function showOverlay() {   
+            document.getElementById('overlay').style.display = 'flex';
+        }
+        function closeOverlay() {
+            document.getElementById('overlay').style.display = 'none';
+        }
+        function login(){
+            document.getElementById('log-in').style.display = 'flex';
+            document.getElementById('reg-in').style.display = 'none';
+        }
+        function regis(){
+            document.getElementById('log-in').style.display = 'none';
+            document.getElementById('reg-in').style.display = 'flex';
+        }
+    </script>
 </body>
 </html>
